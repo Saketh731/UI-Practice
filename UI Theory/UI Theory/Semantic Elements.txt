@@ -1,0 +1,207 @@
+Semantic elements = elements with a meaning.
+
+
+What are Semantic Elements?
+===========================
+A semantic element clearly describes its meaning to both the browser and the developer.
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+
+Many web sites contain HTML code like: <div id="nav"> <div class="header"> <div id="footer"> to indicate navigation, header, and footer.
+
+******NOTE: Elements such as <header>, <nav>, <section>, <article>, <aside>, and <footer> act more or less like <div> elements. 
+	    They group other elements together into page sections. However where a <div> tag could contain any type of information, 
+	    it is easy to identify what sort of information would go in a semantic <header> region.
+
+Usage of Semantic tags?
+=======================
+Semantics elements in HTML can be used to define different parts of a web page:
+<article>
+<aside>
+<details>
+<figcaption>
+<figure>
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section>
+<summary>
+<time>
+<form>
+<table>
+
+
+<section> Element
+-----------------
+Defines a section in a document
+A section is a thematic grouping of content, typically with a heading.  Ex: Introduction, content, and contact information
+
+NOTE: A section can have its own <header> and <footer> in it
+
+	
+<article> Element
+-----------------
+<article> element specifies independent, self-contained content
+An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site.
+Ex:Forum post
+   Blog post
+   Newspaper article
+
+
+NOTE: An article can have its own <header> and <footer> in it
+
+
+Nesting <article> in <section> or Vice Versa?
+---------------------------------------------
+<section> elements can contain <article> elements, and <article> elements can contain <section> elements.
+
+
+<header> Element
+----------------
+The <header> element is generally found at the top of a document, a section, or an article 
+and usually contains the main heading and some navigation and search tools.
+
+<header> element represents a container for introductory content or a set of navigational links.
+Ex: <header> element typically contains: one or more heading elements (<h1> - <h6>)
+					 logo or icon
+					 authorship information
+
+NOTE: 	 You can have several <header> elements in one HTML document. 
+	 However, <header> cannot be placed within a <footer>, <address> or another <header> element.
+
+
+
+footer> Element
+---------------
+A <footer> is generally found at the bottom of a document, a section, or an article
+Defines a footer for a document, section, article
+Just like the <header> the content is generally metainformation, such as author details, legal information etc..
+Note: It is also valid to include <section> elements within a footer
+
+Ex: authorship information
+    copyright information
+    contact information
+    sitemap
+    back to top links
+    related documents
+
+NOTE: You can have several <footer> elements in one document.
+  
+
+
+<small> Element
+---------------
+The <small> element often appears within a <footer> or <aside> element which would usually 
+contain copyright information or legal disclaimers, and other such fine print. 
+Ex: <footer><small>&copy;Company A</small> Date</footer>
+
+
+
+<nav> Element
+-------------
+<nav> element defines a set of navigation links.
+
+NOTE: NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major block of navigation links.
+
+
+
+<aside> Element
+---------------
+The <aside> element defines some content aside from the content it is placed in (like a sidebar).
+The <aside> content should be indirectly related to the surrounding content.
+
+Ex:
+<head>
+<style>
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+}
+</style>
+</head>
+<body>
+
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+<aside>
+<p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+</body>
+
+
+
+<figure> and <figcaption> Elements
+----------------------------------
+The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+
+The <figcaption> tag defines a caption for a <figure> element. 
+The <figcaption> element can be placed as the first or as the last child of a <figure> element.
+
+Ex: <figure>
+       <img src="pic_trulli.jpg" alt="Trulli">
+       <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+    </figure>
+
+
+
+
+
+
+
+
+
+<details> Tag
+-------------
+Specifies additional details that the user can open and close on demand.
+<details> tag is often used to create an interactive widget that the user can open and close
+Tip: The <summary> tag is used in conjuction with <details> to specify a visible heading for the details.
+
+Ex:
+<details>
+  <summary>Epcot Center</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
+
+
+<mark tag>
+----------
+Defines text that should be marked or highlighted
+Ex: <p>Do not forget to buy <mark>milk</mark> today.</p>
+
+
+<time> tag
+----------
+The <time> element allows an unambiguous ISO 8601 date to be attached to a human-readable version of that date.
+Why bother with <time>? While humans can read time that can disambiguate through context in the normal way, 
+the computers can read the ISO 8601 date and see the date, time, and the time zone.
+
+Ex: <p>Open from <time>10:00</time> to <time>21:00</time> every weekday.</p>
+    <time datetime="2017-10-31T11:21:00+02:00">Tuesday, 31 October 2017</time>
+    <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+
+NOTE: The datetime attribute of this element is used translate the time into a machine-readable format so that browsers can offer to add 
+      date reminders through the user's calendar, and search engines can produce smarter search results
+
+
+
+
+Doubts
+------
+Why sematics tags if we can use <div id="nav"> <div class="header"> <div id="footer"> instead
+Are all there <header>, <footers> must in a website, as i read they are useful for SEO and also seen websites which dont even use them  Ex: figure tag
+Even header element containd a navigation links, so what is the use of <nav> tag
+In which section do we placed the adds, and also I observed they are given position:sticky
+These are just meaningfull names wright, any way we have to handle the layout using frameworks, float, flexbox, grid
+Are sidebars for navigation purpose should be declared in <aside> tag always
+
+

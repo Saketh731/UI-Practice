@@ -1,0 +1,176 @@
+<meta> tags
+===========
+Meta data is the data about the data. Our web page shows and tells some information.
+But meta data tells about our web page. It is the information about the page
+Some of the meta tags can be used in the Search Engine Optimization (SEO) 
+
+NOTE: meta tags wont contain a closing tag. The attributes in it tells about the tag
+      It is not displayed on the page itself, it can be read by search engines and web crawlers.    
+
+Metadata contains information about the page. This includes information about styles, scripts and data to help software (search engines, browsers, etc.) 
+use and render the page. Metadata for styles and scripts may be defined in the page or link to another file that has the information. 
+
+Ex:
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="30; url = http://www.google.com">
+  
+  <title>Meta Data</title>
+  <base href="https://www.w3schools.com/" target="_blank">
+  <link rel="stylesheet" href="styles.css">
+  <style></style>
+</head>
+
+
+Attribute			Value					Description
+---------			-----					-----------
+charset			    character_set		Specifies the character encoding for the HTML document
+
+content		                text			Specifies the value associated with the http-equiv or name attribute
+
+http-equiv		content-security-policy
+			    content-type		Provides an HTTP header for the information/value of the content attribute
+	                    default-style
+		              refresh			
+
+name		          application-name
+			       author
+			     description		Specifies a name for the metadata
+			     generator
+			     keywords
+	                      viewport			
+
+The good meta tags
+==================
+These are the meta tags that should be on every page, no matter what.
+
+1. Meta content type
+--------------------
+This tag is necessary to declare your character set for the page
+Ex:
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<meta charset="UTF-8"/>
+
+NOTE: UTF-8 - Character encoding for Unicode
+      ISO-8859-1 - Character encoding for the Latin alphabet
+
+2. Title
+--------
+While the title tag doesn’t start with "meta," it is in the header and contains information that's very important to SEO. 
+You should always have a unique title tag on every page that describes the page.
+Recommend keeping your titles under 60 characters long
+(You can see the title clearly when number of pages occur in the search results)
+
+Ex: <title>Page Title</title>
+
+3. Meta description
+-------------------
+This tag doesn't influence ranking, but it's very important regardless
+It provides description about the page (when number of pages occur in the search results) 
+Should be within 160 characters, and write it to catch the user's attention.
+
+Ex: <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+
+
+4. Viewport
+-----------
+In this mobile world, you should be specifying the viewport. If you don’t, you run the risk of having a poor mobile experience
+
+"width=device-width" instructs the page to match the screen's width in device-independent pixels.
+(Some browsers keep the page's width constant when rotating to landscape mode, and zoom rather than reflow to fill the screen)
+"initial-scale=1" instructs browsers to establish a 1:1 relationship between CSS pixels and device-independent pixels regardless of device orientation
+(i.e) initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+Ex: <meta name=viewport content="width=device-width, initial-scale=1">
+
+
+
+
+
+The indifferent meta tags
+=========================
+
+
+1. Social meta tags
+-------------------
+OpenGraph and Twitter data are important to sharing
+Ex: <meta name="twitter:site" content="@publisher_handle">
+
+
+2. Robots
+---------
+<meta name="robots" content="noindex" />
+
+
+3. Keywords 
+-----------
+No good SEO is going to recommend spending any time on this tag, there's some very small possibility it could help you somewhere.
+Ex: <meta name="keywords" content="HTML, CSS, JavaScript">
+
+4. Refresh
+----------
+This is the poor man's redirect and should not be used, if at all possible. You should always use a server-side 301 redirect.
+Ex: meta http-equiv="refresh" content="5, url=http://www.google.com" />
+
+*5. Revised
+-----------
+Ex: <meta name= "revised" content="Author who revised it, 15/12/2020">
+
+
+6. Language
+-----------
+The only reason to use this tag is if you're moving internationally and need to declare the main language used on the page.
+
+Ex:<html lang="en">
+	...
+   </html>
+
+Chinese		zh
+Gujarati	gu
+Hindi		hi
+
+
+
+
+Bad meta tags
+=============
+Nothing bad will happen to your site if you use these — let me just make that clear. They're a waste of space though; even Google says so
+
+1. author
+---------
+
+2. Revisit after
+----------------
+
+3. Rating 
+---------
+
+4. Expiration/date   
+------------------
+Expiration" is used to note when the page expires, and "date" is the date the page was made 
+
+5. Copyright 
+------------
+Look at the footer of your site. I would guess it says "Copyright 20xx" in some form. Why say it twice
+
+6. Generator
+------------
+
+7. Cache-control
+----------------
+
+8. Resource type
+----------------
+
+
+
+
+Doubts
+======
+In viewport why dont we set the height to follow the scree height
+

@@ -1,0 +1,43 @@
+aria-label
+==========
+The aria-label attribute is used to define a string that labels the current element. 
+Use it in cases where a text label is not visible on the screen. (If there is visible text labeling the element, use aria-labelledby instead.)
+[***NOTE: You should only use aria-label when it’s not possible to have the label visible on screen]
+
+Ex: <div role="group" aria-label="Groceries">
+    <img src="xyz.com" role="button" aria-label="Follow on instagram">
+
+
+
+aria-labelledby
+===============
+In theory, you should use aria-labelledby if the text is visually on-screen somewhere
+aria-labelledby attribute refers to the IDs of the elements that act as their labels 
+(Also you need to use aria-labelby instead of aria-label when the label keeps on changing. Ex: For images)
+
+However, with current support, you should always use aria-labelledby, even if you need the label to be hidden
+because VoiceOver doesn’t correctly read the hierarchy if aria-label is in use.
+
+
+Ex: 
+<p id="group1">Outer group</p>
+<p id="item1">First item</p>
+<div role="group" aria-labelledby="group1">
+<a href="javascript:" role="button" aria-labelledby="item1">Item Content</a>
+</div>
+
+VoiceOver will read the button as “First item Outer group button”
+
+
+Ex2:
+<p id="item1">First item</p>
+<div role="group" aria-label="Outer group">
+<a href="javascript:" role="button" aria-labelledby="item1">Item Content</a>
+</div>
+
+VoiceOver will now read the button as simple “First item button”
+
+
+
+
+

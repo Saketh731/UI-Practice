@@ -1,0 +1,66 @@
+Static
+------
+Default value, as all elements are arranged one after the other
+
+Relative
+--------
+Acts like static only
+You will know the exact difference when you apply left, right, botto,, top to it
+It will move relative to itself ([i.e] relative to its position if it was declared as static) when you apply left, top etc.. 
+**Note: It is not used alone quite often. Mostly used in combination with absolute 
+
+
+Absolute
+--------
+If you declare an element with display: absolute, it will behave as if the element is not there on the screen
+It means the the element is excluded from the actual dom flow and it starts behaving like an inline element (not exactly) instead of bloack element.
+(i.e) The width like before doesent take up the whole screen with and will be to the text with. And also it dosent come on new like like a block
+
+(i.e) Remaining elements will overflow into this element
+
+Unlike relative if you declare top:0px it will go and stick to the top of the html.  (i.e) it wont move relative to itself
+[i.e] It will be relative to the actual <html> by default.
+**If you want it to be relative to its parent then you need to declare the parent as display: relative | absolute | fixed | sticky.  [Mostly relative]
+**Most often absolute is used in combination with relative.  So in this way it will be relative to its parent
+
+Ex: 
+If your having a big outer box 
+Inside that your having an image
+So if you want that image to be placed relative to the outer box, then you declare image as display: absolute and outer box as display: relative
+By doing this you can position the image wherever you want in the outer box
+
+
+
+Fixed
+-----
+Fixed behave same like absolute  [like as if it is not there on the screen and by having top:0px will stick to screen top]
+**NOTE: But it will not be relative to its parent unlike absolute.  It will only be relative to the **VIEWPORT**
+
+In addition to this it will be fixed to the screen
+i.e It is completely removed from actual DOM flow and fixed to the viewport, so that even if you scroll the page it will be fixed at that place only
+
+
+Sticky
+------
+It is a combination of both relative and fixed
+If you declare top:0px, it will behave same like relative util it reaches the top:0px,
+Once it reached the top of the screen (as top is 0px there) it will start behaving like fixed
+i.e even if you scroll the page it will be sticked to that place and will be visible always
+
+
+
+z-index
+-------
+If two elements overlap each othe, we can decide which one to come above which one by giving z-index property. 
+Ex: z-index: 10;
+
+It is like a z-axix in 3D view.
+The element with more z-index is placed at top
+**z-index can be either positive or negative
+
+Internally the elements are stored in a stack context. So the element with higher z-index (stack order) will be at the top of the stack
+***By setting the z-index value we are actually setting the stack order of an element
+
+**For the z-index to work the element should be given a position property for sure. Like position: relative | absolute | static | sticky,   except static
+
+ 

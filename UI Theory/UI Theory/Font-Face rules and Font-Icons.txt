@@ -1,0 +1,185 @@
+Font-Face rules
+===============
+The @font-face CSS at-rule specifies a custom font with which to display text; 
+the font can be loaded from either a remote server or a locally-installed font on the user's own compute
+
+
+With the @font-face rule, web designers do not have to use one of the "web-safe" fonts anymore
+
+In the @font-face rule you must first define a name for the font (e.g. myFirstFont), and then point to the font file.
+
+
+**NOTE: src => Specifies the resource containing the font data. This can be a URL to a remote font file location or the name of a font on the user's computer.
+	To provide the browser with a hint as to what format a font resource is — so it can select a suitable one — it is possible to include a 
+        format type inside a format() function
+	The available types are: "woff", "woff2", "truetype", "opentype", "embedded-opentype", and "svg".
+
+Ex:
+@font-face {
+  font-family: myFirstFont;
+  src:local("sensation_light"),                   //local() means if that specified font name is downloaded in the user's system then he uses it, or else he downloads it from the link given in url()
+      url(sansation_light.woff);
+      //url('webfont.woff2') format('woff2');
+}
+
+div {
+  font-family: myFirstFont;
+}
+
+
+
+font-family	name	Required. Defines the name of the font.
+src		URL	Required. Defines the URL(s) where the font should be downloaded from
+
+font-stretch		Optional. Defines how the font should be stretched. Default value is "normal"
+font-style		Optional. Defines how the font should be styled. Default value is "normal"
+font-weight		Optional. Defines the boldness of the font. Default value is "normal"
+unicode-range		Optional. Defines the range of unicode characters the font supports. Default value is "U+0-10FFFF"
+
+
+
+
+Ex:
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+  //url('webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_bold.woff);
+  font-weight: bold;
+}
+
+div {
+  font-family: myFirstFont;
+}
+
+
+Here, "sansation_bold.woff" is another font file, that contains the bold characters for the Sansation font
+***In this way you can have many @font-face rules for the same font***
+
+
+
+**NOTE: Things are shifting heavily toward WOFF and WOFF 2, so we can probably get away with
+@font-face {
+  font-family: 'MyWebFont';
+  src:  url('myfont.woff2') format('woff2'),
+        url('myfont.woff') format('woff');
+}
+
+
+Other font-face rules
+=====================
+
+font-family
+-----------
+Specifies a name that will be used as the font face value for font properties.
+
+
+font-display
+------------
+Determines how a font face is displayed based on whether and when it is downloaded and ready to use.
+[ auto | block | swap | fallback | optional ]
+
+font-stretch
+------------	
+The font-stretch CSS descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the @font-face rule.
+condensed, extra-expanded, 50%, 100%, 125%, 200%
+
+
+font-style
+----------
+normal, italic, oblique, oblique 30deg, oblique 30deg 50deg
+
+	
+font-weight
+-----------
+normal, bold, 400, 300, 300 500
+
+
+font-variant
+------------
+
+
+unicode-range
+-------------
+Defines the range of unicode characters the font supports.
+
+unicode-range: U+26;               /* single codepoint */
+unicode-range: U+0-7F;
+unicode-range: U+0025-00FF;        /* codepoint range */
+unicode-range: U+4??;              /* wildcard range */
+unicode-range: U+0025-00FF, U+4??; /* multiple values */
+
+
+src
+---
+Specifies the resource containing the font data. This can be a URL to a remote font file location or the name of a font on the user's computer.
+
+src: url(https://somewebsite.com/path/to/font.woff); /* Absolute URL */
+src: url(path/to/font.woff);                         /* Relative URL */
+src: url(path/to/font.woff) format("woff");          /* Explicit format */
+src: url('path/to/font.woff');                       /* Quoted URL */
+src: url(path/to/svgfont.svg#example);               /* Fragment identifying font */
+
+
+src: local(font);      /* Unquoted name */
+src: local(some font); /* Name containing space */
+src: local("font");    /* Quoted name */
+
+/* Multiple items */
+src: local(font), url(path/to/font.svg) format("svg"),
+     url(path/to/font.woff) format("woff"),
+     url(path/to/font.otf) format("opentype");
+
+
+
+
+
+Different Font Formats
+======================
+
+The Web Open Font Format  WOFF / WOFF2
+--------------------------------------
+Developed by Mozilla 
+WOFF fonts often load faster than other formats because they use a compressed version of the structure used by OpenType (OTF) and TrueType (TTF) fonts. 
+This format can also include metadata and license info within the font file. 
+This format seems to be the winner and where all browsers are headed.
+
+
+Scalable Vector Graphics SVG / SVGZ
+-----------------------------------
+
+
+Embedded Open Type EOT
+----------------------
+Created by Microsoft
+It’s the only format that IE8 and below will recognize when using @font-face
+
+
+OpenType Font and TrueType Font OTF / TTF
+-----------------------------------------
+The WOFF format was initially created as a reaction to OTF and TTF, in part, because these formats could easily (and illegally) be copied, 
+However, OpenType has capabilities that many designers might be interested in
+
+
+
+
+
+Font-icons
+==========
+You can get all the icons from online using the link given in Font Awesome website
+
+If you want the font icons even offline, then you need to download them first in your system
+
+After downloading it in you system you get them in your html file using link tag
+***NOTE: You only get the all.css file in CSS Folder present inside Font Awesome Folder
+Ex: <link rel="stylesheet" type="text/css" href="address"/>
+    <i class="fab fa-accusoft"></i>  //NOTE: Most of the time taken in either <i> tag or <span> tag 
+
+To get the icon class, go to Font Awesome website, go to icons tab and select an icon of your choice, and then copy the class given there
+
+
+ 

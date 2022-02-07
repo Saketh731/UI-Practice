@@ -1,0 +1,16 @@
+Container Elements
+------------------
+=> Container tag consists of opening tag+content+closing tag
+=> Container tags are used to enclose texts, images etc. Like <body> , <div> etc are container tags as we put some content inside them.
+
+
+
+Empty Elements
+--------------
+=> Empty tag is tag without content or a closing tag (i.e with only opening tag)
+=> empty tags are used to insert something. Like if we want to insert an image or a line-break or a horizontal-line , 
+   we use <img />, <br />, <hr /> tags respectively.
+
+NOTE: Empty tags can be used inside the container tags. Like you can insert a line-break or an image anywhere in your page 
+      but it should be inside some container tag.
+

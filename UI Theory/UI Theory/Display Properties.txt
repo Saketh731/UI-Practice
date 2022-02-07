@@ -1,0 +1,104 @@
+Display Property
+================
+Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves
+NOTE:
+-----
+The default value for all elements is inline. Most “User Agent Stylesheets” (the default styles the browser applies to all sites) 
+reset many elements to “block”
+
+
+
+Inline
+------
+The default value for elements
+It doesn’t break the flow of the text
+
+An inline element will accept margin and padding, but the element still sits inline as you might expect. 
+Margin and padding will only push other elements horizontally away, not vertically.
+By using padding it overflows to other elements or text
+An inline element will not accept height and width.
+
+
+
+Inline Block
+------------
+A number of elements are set to block by the browser UA stylesheet
+They are usually container elements, like <div>, <section>, and <ul>. Also text “blocks” like <p> and <h1>
+Block level elements do not sit inline but break past them. By default (without setting a width) they take up as much horizontal space as they can.
+
+
+
+Run-in
+------
+First, this property doesn’t work in Firefox
+Displays an element as either block or inline, depending on context
+
+
+None
+----
+Entirely removes the element from the page. Note that while the element is still in the DOM, it is removed visually 
+and any other conceivable way (you can’t tab to it or its children, it is ignored by screen readers, etc).
+
+***NOTE:****
+visibility:hidden;
+
+It also hides an element.
+However, the element will still take up the same space as before. The element will be hidden, but still affect the layout
+
+
+
+Table Values
+------------
+There is a whole set of display values that force non-table elements to behave like table elements
+
+***NOTE:  it sometimes allows you to be “more semantic” with your code while utilizing the unique positioning powers of tables.
+
+div {
+  display: table;
+  display: table-cell;
+  display: table-column;
+  display: table-colgroup;
+  display: table-header-group;
+  display: table-row-group;
+  display: table-footer-group;
+  display: table-row;
+  display: table-caption;
+}
+
+Ex:
+<div style="display: table;">
+  <div style="display: table-row;">
+    <div style="display: table-cell;">
+      Gross but sometimes useful.
+    </div>
+  </div>
+</div>
+
+
+
+Value						Description	
+-----						-----------
+inline			Displays an element as an inline element (like <span>). Any height and width properties will have no effect	
+block			Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width	
+contents		Makes the container disappear, making the child elements children of the element the next level up in the DOM	
+flex			Displays an element as a block-level flex container	
+grid			Displays an element as a block-level grid container	
+inline-block		Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values	
+inline-flex		Displays an element as an inline-level flex container	
+inline-grid		Displays an element as an inline-level grid container	
+inline-table		The element is displayed as an inline-level table	
+list-item		Let the element behave like a <li> element	
+run-in			Displays an element as either block or inline, depending on context	
+table			Let the element behave like a <table> element	
+table-caption		Let the element behave like a <caption> element	
+table-column-group	Let the element behave like a <colgroup> element	
+table-header-group	Let the element behave like a <thead> element	
+table-footer-group	Let the element behave like a <tfoot> element	
+table-row-group		Let the element behave like a <tbody> element	
+table-cell		Let the element behave like a <td> element	
+table-column		Let the element behave like a <col> element	
+table-row		Let the element behave like a <tr> element	
+none			The element is completely removed	
+initial			Sets this property to its default value. 	
+inherit			Inherits this property from its parent element. 
+

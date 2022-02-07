@@ -1,0 +1,21 @@
+div{
+    border: 1px solid blue;
+    width: 800px;
+    height: 200px;
+    margin-top: 20px;
+}
+a{
+    border: 2px solid red;
+    /* height: 200px;  
+    width: 200px;    */
+    margin-top: 20px;
+    margin-left: 20px;  
+    font-size: 25px;
+    padding: 20px;
+}
+
+a{
+    display: inline-block;
+    height: 100px;
+    width: 300px;
+}

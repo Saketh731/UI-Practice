@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            form input[type="text"][id="email"]:focus{
+                background-color: pink;
+            }
+
+            form input[type="text"]:focus{
+                background-color: #c7c4c4;
+            }
+            input:checked + label{
+                color: blue;
+            }
+            #form1 input[id="female"]:checked + label{
+                color:pink;
+            } 
+        </style>
+    </head>
+    <body>
+        <form id="form1">
+            <label for="fname">FirstName:</label>
+            <input type="text" name="firstName" id="fname"/><br/>
+            <label for="lname">LastName:</label>
+            <input type="text" name="lastName" id="lname"/><br/>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email"/><br/>
+            <input type="radio" name="gender" id="male"/>
+            <label class="gender" for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label class="gender" for="female">Female</label>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 10px;
+        }
+        
+        header ul>li {
+            margin-right: 10px;
+        }
+        
+        header a {
+            margin-left: 10px;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+        }
+        
+        .headerContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header {
+            /* height: 100px; */
+            background-color: orange;
+        }
+        
+        .flexWrapper {
+            display: flex;
+        }
+        
+        .menu {
+            width: 200px;
+            overflow: hidden;
+            background-color: burlywood;
+        }
+        
+        .content {
+            width: 70%;
+            background-color: red;
+            width: calc(100vw - 200px);
+            overflow: auto;
+        }
+        
+        .ads {
+            width: 10%;
+            background-color: cadetblue;
+        }
+        
+        main {
+            min-height: calc(100vh - 200px);
+        }
+        
+        footer {
+            height: 100px;
+            background-color: purple;
+        }
+        
+        main div {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="headerContainer">
+        <div class="container headerContainer">
+            <a href="javascript:void(0)">Logo</a>
+            <nav>
+                <ul>
+                    <li> <a href="javascript:void(0)">Home</a></li>
+                    <li> <a href=""> Personal </a></li>
+                    <li> <a href=""> Business </a></li>
+                    <li> <a href=""> Sing Up </a></li>
+                    <li> <a href=""> Log In </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class='flexWrapper'>
+        <div class='menu'>
+            menu
+        </div>
+        <div class='content'>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <!-- <div class='ads'>
+            Ads
+        </div>
+     -->
+    </main>
+    <footer>footer</footer>
+</body>
+
+</html>

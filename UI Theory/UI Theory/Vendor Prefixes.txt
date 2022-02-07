@@ -1,0 +1,83 @@
+CSS Vendor Prefixes
+===================
+
+
+What are CSS Vendor Prefixes?
+=============================
+Here the vendor means the Browser Vendors
+We place the vendor prefixes before a CSS property name
+
+
+Formats
+-------
+'-' + vendor identifier + '-' + meaningful name
+'_' + vendor identifier + '-' + meaningful name
+
+
+Each browser has its own separate vendor identifier
+
+Prefix			Browser(s)
+------			----------
+-webkit-		Google Chrome, Safari, Android Browser
+-moz-			Firefox
+-o-			Opera
+-ms-			Internet Explorer, Edge
+-khtml-			Konqueror
+
+
+Ex:
+
+.styling{
+-webkit-transition: all 4s ease;
+-moz-transition: all 4s ease;
+-ms-transition: all 4s ease;
+-o-transition: all 4s ease;
+transition: all 4s ease; 
+}
+
+
+
+NOTE: Although they are typically used before the property name, 
+      they can also be used to prefix specifc parts of the property value, as is shown in the exmaple below
+
+
+.example {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000), color-stop(100%, #fff));
+
+  background: -webkit-linear-gradient(top, #000 0%, #fff 100%);
+
+  background: -moz-linear-gradient(top, #000 0%, #fff 100%);
+}
+
+
+
+
+
+Why do we use them?
+===================
+Before new properties are formally added to CSS, browsers have the ability to test them out using their own methods of implementation
+In order to allow this differing implementation between browsers during the testing phase, the vendor-prefixing policy was introduced in CSS2.1
+
+
+
+How do we use them?
+===================
+The proper way to use vendor-prefixed properties is to place them before the unprefixed property
+Ex:
+.example {
+  -webkit-animation-name: slidein;
+  -o-animation-name: slidein;
+  -ms-animation-name: slidein;
+  -moz-animation-name: slidein;
+  animation-name: slidein;
+}
+
+By putting the unprefixed version last, we ensure that, when browsers eventually support the official property, that is what they will use
+
+
+
+
+
+Which properties need a prefix?
+===============================
+The list of properties for which we need to use vendor prefixes is always changing

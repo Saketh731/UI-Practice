@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            #div1{
+                background-color: rgb(252, 162, 177);
+            }
+            #div2{
+                background-color: rgb(74, 207, 252);
+            }
+            #div3{
+                background-color: rgb(94, 252, 94)
+            }
+
+            #outer{
+                height: 100vh;
+                display: grid;
+                /* grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr; */
+                /* grid-template-areas: 
+                "div1 div1"
+                "div2 ."
+                ". div3";    */
+
+                grid-template-columns: 1fr 1fr;
+                /* grid-template-rows: 1fr; */
+                /* grid-template-areas: 
+                "div1 div2"
+                "div3 div3"; */
+                /* justify-items: center;
+                align-items: center; */
+            }
+            #div1{
+                grid-area: div1;
+                /* align-self: center;
+                justify-self: center; */
+                
+                
+                /* display: flex;
+                justify-content: space-around;
+                align-items: center; */
+            }
+            
+            #div2{
+                grid-area: div2;
+            }
+
+            #div3{
+                grid-area: div3;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="outer">
+            <div id="div1"><h1>Div1</h1><h2>Hello</h2></div>
+            <div id="div2"><h1>Div2</h1></div>
+            <div id="div3"><h1>Div3</h1></div>
+        </div>
+    </body>
+</html>

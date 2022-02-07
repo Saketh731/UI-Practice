@@ -1,0 +1,69 @@
+<!DOCTYPE html> - it is not a tag but a statement	
+Doctype stands for Document Type Declaration	
+It informs the web browser about the type and version of HTML used in building the web document, so that the browser can renders it correctly(properly).
+This helps the browser to handle and load it properly
+
+
+
+doctype in Older Versions of HTML
+=================================
+In HTML 4.01, the DOCTYPE declaration refers to a document type definition (DTD)
+A DTD defines the structure and the legal elements of an XML document
+Because HTML 4.01 was based on the Standard Generalised Markup Language (SGML), referring to a DTD in the DOCTYPE declaration was necessary.
+
+Additionally, doctypes for HTML 4.01 required the declaration of either strict, transitional, or frameset DTD
+--------------------------------------------------------------------------------------------------------------
+1.Strict DTD:
+	  Used for web pages that exclude attributes and elements that W3C expects to phase out as CSS support grows
+	  Ex: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+2.Transitional DTD: 
+          Used for web pages that include attributes and elements that W3C expects to phase out as CSS support grows
+	  Ex: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+3.Frameset DTD: 
+          Used for web pages with frames
+	  EX: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+
+
+
+HTML5 (and above) doctype Declaration
+=====================================
+HTML5 <!DOCTYPE html> declaration is the simplest and shortest compared to those used by previous versions
+It dosen't refer to DTD	 as it is no longer based on SGML
+Ex:
+<!DOCTYPE html>
+
+It follows all the web standerds given by W3C 
+By specifying <!DOCTYPE html> browser renderes the page in **Full standards mode**
+
+
+
+
+
+History
+=======
+During the formative years of HTML, web standards were not agreed upon yet. Browser vendors would build new features in whatever way they wanted.
+So web developers choose a specific browser to develop their site, This meant that sites would not render well in unsupported browsers.
+
+The W3C (World Wide Web Consortium) wrote a set of web standards to handle this situation
+Now it was a trouble to browser vendor as they are having previous sites built already and cannot change them now
+To handle this problem, browser vendors began programming rendering modes in to their browsers. So web developers need to add doctype declaration at the top of an HTML document
+*****The doctype declaration would tell the browser which rendering mode to use for that document******
+
+Three separate rendering modes were generally available across browsers:
+-----------------------------------------------------------------------
+1.Full standards mode renders pages according to the W3C web standards.
+2.Quirks mode renders pages in a non standards compliant way.
+3.Almost standards mode is close to full standards mode, but features support for a small number of quirks.
+
+
+****NOTE****
+------------
+If we give <!DOCTYPE html> it specifies the browser to use Full standards rendering mode 
+If we dont specify any doctype the browser enters Quirks mode and tries to deal with your code as if it was written in the late 90’s.
+
+
+
+
+
+

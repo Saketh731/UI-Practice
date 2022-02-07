@@ -1,0 +1,45 @@
+Media Queries
+-------------
+A media query consists of a media type and can contain one or more expressions, which resolve to either true or false.
+
+Syntax:
+@media not|only mediatype and (expression) and|, (expression){
+  CSS-Code;
+}
+
+NOTE: Unless you use the not or only operators, the media type is optional and the all type will be implied
+
+******You can also have different stylesheets for different media:
+<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+
+
+Media Types
+-----------
+Value	Description
+all	Used for all media type devices
+print	Used for printers
+screen	Used for computer screens, tablets, smart-phones etc.
+speech	Used for screenreaders that "reads" the page out loud
+
+
+Ex:
+@media screen and (min-width: 480px) {
+  #leftsidebar {width: 200px; float: left;}
+  #main {margin-left: 216px;}
+}
+
+
+NOTE: not takes all the value into brackets till ,
+ 
+NOTE: , acts like <or> operator
+
+	
+
+NOTE:
+(color-index: 256) matches any device with 256 colors exactly
+(min-color-index: 256) matches any device with at least 256 colors
+
+
+NOTE:
+You can also target multiple devices.
+Ex: @media screen, print { ... }

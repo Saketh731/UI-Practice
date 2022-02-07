@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                width:200px;
+                height: 200px;
+                border: 1px solid black;
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="set()">Set</button>
+        <div id="root">
+            <div id="a">1</div>
+            <div id="b">2</div>
+            <div id="c">3</div>
+            <div id="d">4</div>
+        </div>
+    </body>
+    <script>
+        let div = document.getElementById("c");
+        let root = document.getElementById("root");
+        let c = 1;
+        function set(e){
+            localStorage.setItem(c,"Hey");
+            c++;
+            let x = document.getElementById("b");
+            x.remove();
+            root.appendChild(x);
+        }
+
+        perform(div, root);
+        function perform(dv, rt){
+            div.remove();
+            root.appendChild(div); 
+        } 
+    </script>
+</html>

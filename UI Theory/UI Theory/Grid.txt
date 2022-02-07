@@ -1,0 +1,54 @@
+Container
+---------
+grid-template-columns: 1fr 1fr | 200px 200px | ...
+grid-template-rows: 1fr 1fr | 200px 200px | ...
+
+grid-template-areas: 
+                "div1 div2"
+                "div3 .";       //***NOTE: Only adjacent boxes can be extended
+
+justify-items: center | start | end | stretch;
+align-items: center | start | end | stretch;
+
+
+grid-template-columns: repeat(3, 300px) | repeat(auto-fill, 300px) | repeat(auto-fit, 300px) | repeat(auto-fit, minmax(300px, 1fr));
+grid-template-rows: repeat(3, 300px) | repeat(auto-fill, 300px) | repeat(auto-fit, 300px) |  repeat(auto-fit, minmax(300px, 1fr));
+
+grid-auto-colums: minmax(100px, auto) | 100px   //based on content width adjusts it width (i.e) minimum is 100px and increases its width if needed
+grid-auto-rows: minmax(100px, auto) | 80px     //based on content height it adjusts its height, (i.e) minimum is 100px and increases its height if needed
+
+NOTE: With auto-fill, if all elements are occupied in single line itself and more space is left, then the grid will occupy that empty space also
+      To overcome this we go for auto-fit
+NOTE: minmax(300px, 1fr) => minimum should be 300px
+
+
+grid-column-gap: 20px;
+grid-row-gap: 20px;
+
+grid-gap: 20px;
+
+
+
+Child
+-----
+grid-column-start: 2;
+grid-column-end: 3;
+grid-column: 2/3
+
+grid-row-start: 1
+grid-row-end: 3;
+grid-row: 1/3
+
+grid-area: div1   //Some Name
+
+align-self: center | start | end | stretch;
+justify-self: center | start | end | stretch;
+
+
+**Also you can use
+
+display: flex;
+justify-content: space-around | space-between | flex-start .....
+align-items: space-around | space-between | flex-start .....
+
+NOTE: In Grid there is no such thing as space-around, space-between, space-evenly. So you can combine Grid with flex to get maximum benifits out of it

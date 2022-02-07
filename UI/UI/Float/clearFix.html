@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+                width: 25%;
+                background-color: lightpink;
+                border: 1px solid black;
+                float: left;
+            }
+            div{
+                border: 1px solid black;
+                background-color: lightblue;
+                /* overflow: auto; */
+            }
+            span{
+                display: block;  
+                /* clear: both; */
+            }
+            .clearfix::after{
+                content: "";
+                display: table;  
+                clear: left;  
+            }
+        </style>
+    </head>
+    <body>
+        <div class="clearfix">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam aut suscipit vero dolorem odit explicabo doloribus assumenda eveniet voluptatem reiciendis numquam delectus mollitia illo aliquid, sed porro nobis omnis?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eaque magnam dolorum voluptas quidem eveniet ea esse odio saepe reprehenderit! Laudantium quae, quas dolore pariatur excepturi ea quia consectetur optio.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, culpa dicta similique deleniti nesciunt consequatur ratione eos, repellendus dignissimos, voluptatem sed corrupti tenetur quo illo. Dolor exercitationem nihil consequuntur tenetur?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus sit debitis temporibus sequi sapiente iste quaerat inventore, quidem, minus, aspernatur odio! Animi perspiciatis ullam veniam non ea quis quos voluptas?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eligendi, vitae necessitatibus dolore ipsum corrupti, enim aspernatur repudiandae sint tempora nihil quia adipisci non, quaerat praesentium beatae deserunt dolorem! Hic.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ipsam vero mollitia aspernatur, sequi nesciunt commodi maiores reprehenderit optio quaerat fuga voluptates nihil aliquid quos. Perferendis temporibus repudiandae nihil numquam.</p>
+        </div>
+        <span>Hello People!</span>  <!--Clear property is not working for the inline elements-->
+    </body>
+</html>
